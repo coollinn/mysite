@@ -6,3 +6,4 @@ class BlockAdmin (admin.ModelAdmin):
 
 # Register your models here.
 admin.site.register(Block, BlockAdmin)
+
