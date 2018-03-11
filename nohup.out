@@ -1,0 +1,101 @@
+[09/Mar/2018 07:53:16] "GET / HTTP/1.1" 200 12
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 09, 2018 - 07:53:07
+Django version 1.8.5, using settings 'mysite.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+[09/Mar/2018 08:04:21] "GET / HTTP/1.1" 200 12
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 09, 2018 - 07:54:22
+Django version 1.8.5, using settings 'mysite.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+[09/Mar/2018 08:12:14] "GET /forum HTTP/1.1" 301 0
+[09/Mar/2018 08:12:14] "GET /forum/ HTTP/1.1" 500 89876
+[09/Mar/2018 08:12:41] "GET /forum/ HTTP/1.1" 200 0
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 09, 2018 - 08:10:00
+Django version 1.8.5, using settings 'mysite.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 09, 2018 - 08:18:19
+Django version 1.8.5, using settings 'mysite.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 09, 2018 - 08:18:22
+Django version 1.8.5, using settings 'mysite.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 09, 2018 - 08:19:35
+Django version 1.8.5, using settings 'mysite.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+[09/Mar/2018 08:38:32] "GET / HTTP/1.1" 500 92720
+[09/Mar/2018 08:38:59] "GET /block/ HTTP/1.1" 500 92786
+[09/Mar/2018 08:47:43] "GET /block/ HTTP/1.1" 500 92948
+[09/Mar/2018 08:47:50] "GET / HTTP/1.1" 500 92680
+[09/Mar/2018 08:50:57] "GET / HTTP/1.1" 500 93306
+[09/Mar/2018 09:19:38] "GET / HTTP/1.1" 500 81980
+[09/Mar/2018 09:21:53] "GET /block HTTP/1.1" 500 99099
+[09/Mar/2018 09:22:46] "GET /block HTTP/1.1" 500 110785
+[09/Mar/2018 09:25:01] "GET /block HTTP/1.1" 500 111062
+[09/Mar/2018 09:25:28] "GET /block HTTP/1.1" 500 88654
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 09, 2018 - 08:20:39
+Django version 1.8.5, using settings 'mysite.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+[09/Mar/2018 09:28:13] "GET /block HTTP/1.1" 301 0
+[09/Mar/2018 09:28:13] "GET /block/ HTTP/1.1" 500 63606
+[09/Mar/2018 13:52:37] "GET / HTTP/1.1" 200 12
+[09/Mar/2018 13:53:08] "GET / HTTP/1.1" 200 12
+[09/Mar/2018 13:53:32] "GET /block HTTP/1.1" 301 0
+[09/Mar/2018 13:53:33] "GET /block/ HTTP/1.1" 500 63340
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 09, 2018 - 09:26:31
+Django version 1.8.5, using settings 'mysite.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Traceback (most recent call last):
+  File "manage.py", line 10, in <module>
+    execute_from_command_line(sys.argv)
+  File "/usr/local/lib/python3.5/site-packages/django/core/management/__init__.py", line 351, in execute_from_command_line
+    utility.execute()
+  File "/usr/local/lib/python3.5/site-packages/django/core/management/__init__.py", line 303, in execute
+    settings.INSTALLED_APPS
+  File "/usr/local/lib/python3.5/site-packages/django/conf/__init__.py", line 48, in __getattr__
+    self._setup(name)
+  File "/usr/local/lib/python3.5/site-packages/django/conf/__init__.py", line 44, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/usr/local/lib/python3.5/site-packages/django/conf/__init__.py", line 92, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/local/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 662, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/root/workplace/mysite/mysite/settings.py", line 40, in <module>
+    block,
+NameError: name 'block' is not defined
