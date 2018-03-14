@@ -8,21 +8,19 @@
 <div class="container">
     <dev class="row">
         <div class="col-xs-12 col-md-12">
-            <h1>Mega Tech Hello World (Forum)!</h1>
+            <h1>Mega Tech Inc.  Hello World (Forum)!</h1>
         </div>
     </dev>
 
     <div class="row">
         {% for b in blocks %}
           <div class="col-xs-12">
-                {{ b.name  }}
-                {{ b.desc }}
-                {{ b.manager_name }}
+                <div class="col-md-4">{{ b.name  }}</div>
+                <div class="col-md-4">{{ b.desc }}</div>
+                <div class="col-md-1">{{ b.manager_name }}
           </div>
        {% endfor%}
     </div>
-
-
 
 </div>
 
