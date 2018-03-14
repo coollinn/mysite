@@ -21,7 +21,8 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-4">
+        <div class="col-sm-4">
+            <div class="sidebar-module sidebar-module-inset">
               <form class="form-signin">
                 <h2 class="form-signin-heading">Please sign in</h2>
                 <label for="inputEmail" class="sr-only">Email address</label>
@@ -35,9 +36,10 @@
                 </div>
                 <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
               </form>
+            </div>
         </div>
 
-        <div class="col-8">
+        <div class="col-sm-8">
             {% for b in blocks %}
                 <div class="list-group">
                     <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
