@@ -39,13 +39,13 @@
             </div>
         </div>
 
-        <div class="col-sm-6">
+        <div class="col-sm-8">
             {% for b in blocks %}
                 <div class="list-group">
                     <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
                         <div class="d-flex w-100 justify-content-between">
                               <h5 class="mb-1">{{ b.name  }}</h5>
-                              <small class="text-muted">{{ b.manager_name }}</small>
+                              <small class="text-muted"> {{ b.manager_name }} </small>
                         </div>
                         <p class="mb-1">The laster topic :Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
                         <small class="text-muted">{{ b.desc }}</small>
