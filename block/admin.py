@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Block
+from block.models import Block
 
 #add the new classasdf
 class BlockAdmin(admin.ModelAdmin):

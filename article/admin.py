@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Article
+from article.models import Article
 
 #add the new classasdf
 class ArticalAdmin(admin.ModelAdmin):
