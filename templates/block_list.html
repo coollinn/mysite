@@ -24,18 +24,16 @@
 <div class="container">
     <div class="row">
         {% for b in blocks %}
-          <div class="col-xs-12">
-              <div class="list-group">
-                  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-                    <div class="d-flex w-100 justify-content-between">
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+                <div class="d-flex w-100 justify-content-between">
                       <h5 class="mb-1">{{ b.name  }}</h5>
                       <small>{ b.manager_name }</small>
-                    </div>
-                    <p class="mb-1">The laster topic :Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                    <small>{{ b.desc }}</small>
-                  </a>
-              </div>
-          </div>
+                </div>
+                <p class="mb-1">The laster topic :Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                <small>{{ b.desc }}</small>
+            </a>
+        </div>
        {% endfor%}
     </div>
 
