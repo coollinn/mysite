@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Article(models.Modle):
+class Article(models.Model):
     block = models.ForeignKey(Block, verbose_name="BlockID")
     title = models.CharField("ArticleName", max_length=100)
     content = models.CharField("ArticleDesc", max_length=10000)
@@ -15,4 +15,3 @@ class Article(models.Modle):
     class Meta:
         verbose_name = "Artical"
         verbose_name_plural = "Artical"
-        
