@@ -1,4 +1,5 @@
 from django.db import models
+from .models import Block
 
 # Create your models here.
 class Article(models.Model):
