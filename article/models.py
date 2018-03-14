@@ -1,6 +1,4 @@
 from django.db import models
-from django.contrib import admin
-from .models import Block
 
 # Create your models here.
 class Article(models.Model):
