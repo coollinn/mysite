@@ -3,7 +3,7 @@ from block.models import Block
 
 # Create your models here.
 class Article(models.Model):
-    block = models.ForeignKey(Block, verbose_name="BlockID")
+    block = models.ForeignKey(Block, verbose_name="Block")
     title = models.CharField("ArticalName", max_length=100)
     content = models.CharField("ArticalDesc", max_length=10000)
     status = models.IntegerField("Status", choices=((0, "GOOD"), (-1, "DELETE")))

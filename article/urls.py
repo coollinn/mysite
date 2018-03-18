@@ -13,20 +13,12 @@ Including another URLconf
     1. Add an import:  from blog import urls as blog_urls
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
-import django
 from django.conf.urls import include, url
-from django.contrib import admin
-from django.shortcuts import render_to_response
-import views
+from ariticle.views import article_list
 
 
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^article/', include('article.urls')),
-    #url(r'^static/(?P<path>.*)$', django.contrib.staticfiles.views.serve),
-    url(r'^forum/', views.forum),
-    url(r'^block/', "block.views.block_list"),
-    url(r'^$',views.index),
+    url(r'^list/(?P<block_id>\d+)', article_list),
 ]
 
 
