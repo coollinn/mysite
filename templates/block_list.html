@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% base content %}
+{% block content %}
     {% for b in blocks %}
         <div class="list-group">
             <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
@@ -12,4 +12,4 @@
             </a>
         </div>
     {% endfor%}
- {% endbase %}
+ {% endblock %}
