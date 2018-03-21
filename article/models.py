@@ -5,7 +5,7 @@ from block.models import Block
 class Article(models.Model):
     block = models.ForeignKey(Block, verbose_name="Block_name")
     title = models.CharField("ArticleName", max_length=1000)
-    author = models.CharField("ArticleAuthor", max_length=1000)
+    author = models.CharField("ArticleAuthor", max_length=1000, blank=True)
     content = models.CharField("ArticleDesc", max_length=10000)
     status = models.IntegerField("Status", choices=((0, "GOOD"), (-1, "DELETE")))
     create_timestamp = models.DateTimeField("CreateTime", auto_now_add=True)
