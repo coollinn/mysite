@@ -18,9 +18,11 @@
             <td>{{ article.last_update_timestamp|date:"Y-m-d P" }}</td>
         </tr>
     {% endfor %}
+    <tr>
+        <td>
+            <a href="#" class="btn btn-primary">发表文章</a>
+        </td>
+    </tr>
     </tbody>
-    <div class="row">
-        <a href="#" class="btn btn-primary">发表文章</a>
-    </div>
 </table>
 {% endblock %}
