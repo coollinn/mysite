@@ -13,5 +13,5 @@ class Block(models.Model):
         return self.name
 
     class Meta:
-        verbose_name="Block"
-        verbose_name_plural = "Block"
+        verbose_name="°æ¿é"
+        verbose_name_plural = "°æ¿é"
