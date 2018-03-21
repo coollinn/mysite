@@ -15,10 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from article.views import article_list
+from article.views import article_create
+
 
 
 urlpatterns = [
     url(r'^list/(?P<block_id>\d+)', article_list),
+    url(r'^create/', article_create),
+
 ]
 
 
