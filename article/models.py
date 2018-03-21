@@ -15,5 +15,5 @@ class Article(models.Model):
         return self.title
 
     class Meta:
-        verbose_name = "ндуб"
-        verbose_name_plural = "ндуб"
+        verbose_name = "Ф√┤Г╚═"
+        verbose_name_plural = "Ф√┤Г╚═"

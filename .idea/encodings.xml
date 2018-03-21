@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/article/models.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/article/templates/article_list.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/block/models.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/templates/block_list.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/templates/index.html" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
