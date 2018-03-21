@@ -19,6 +19,8 @@ from article.views import article_list
 
 urlpatterns = [
     url(r'^list/(?P<block_id>\d+)', article_list),
+    url(r'^create/', article_create),
+
 ]
 
 
