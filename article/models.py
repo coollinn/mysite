@@ -3,7 +3,7 @@ from block.models import Block
 
 # Create your models here.
 class Article(models.Model):
-    block = models.ForeignKey(Block.name, verbose_name="Block_name")
+    block = models.ForeignKey(Block, verbose_name="Block_name")
     title = models.CharField("ArticleName", max_length=1000)
     author = models.CharField("ArticleAuthor", max_length=1000)
     content = models.CharField("ArticleDesc", max_length=10000)
