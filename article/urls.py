@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from article.views import article_list
+from article.views import article_create
+
 
 
 urlpatterns = [
