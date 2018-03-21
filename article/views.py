@@ -12,4 +12,4 @@ def article_list(request, block_id):
     return render_to_response("article_list.html", {"articles":articles_objs, "b":block})
 
 def article_create(request):
-    return render("article_create.html")
+    return render(request, "article_create.html")
