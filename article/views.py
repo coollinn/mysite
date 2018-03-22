@@ -34,7 +34,10 @@ def article_create(request, block_id):
         """
         form=ArticleForm(request.POST)
         if form.is_valid():
-            article = Article(block=block, title=form.cleaned_data["title"], content=form.cleaned_data["content"], status=0)
+            #article = Article(block=block, title=form.cleaned_data["title"], content=form.cleaned_data["content"], status=0) 可用下面3行替代，字段多的时候很明显优化
+            article = form.save(commit=False)
+            article.block = block
+            article.status = 0
             article.save()
             return redirect("/article/list/%s" %block_id)
         else:
