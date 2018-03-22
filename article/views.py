@@ -3,6 +3,7 @@ from django.shortcuts import render_to_response
 from django.shortcuts import redirect
 from block.models import Block
 from article.models import Article
+form aritcle.forms import ArticleForm
 
 
 # Create your views here.
@@ -15,11 +16,12 @@ def article_list(request, block_id):
 def article_create(request, block_id):
     block_id = int(block_id)
     block = Block.objects.get(id=block_id)
-    title = request.POST["title"].strip()
-    content = request.POST["content"].strip()
     if request.method == "GET":
         return render(request, "article_create.html", {"b": block})
     else:
+        """ 这段检查代码用校验器forms.py来替代
+        title = request.POST["title"].strip()
+        content = request.POST["content"].strip()
         if not title or not content:
             return render(request, "article_create.html",
                     {"b":block, "error":"标题和内容都不能为空", "title":title, "content":content})
@@ -29,3 +31,11 @@ def article_create(request, block_id):
         article = Article(block=block, title=title, content=content, status=0)
         article.save()
         return redirect("/article/list/%s" %block_id)
+        """
+        form=ArticleForm(request.POST)
+        if form.is_valid():
+            article = Article(block=block, title=form.cleaned_data["title"], content=form.cleaned_data["content"], status=0)
+            article.save()
+            return redirect("/article/list/%s" %block_id)
+        else:
+            return render(request, "article_create.html", {"b":block, "form":form})
