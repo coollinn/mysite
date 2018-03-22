@@ -3,7 +3,7 @@ from django.shortcuts import render_to_response
 from django.shortcuts import redirect
 from block.models import Block
 from article.models import Article
-form aritcle.forms import ArticleForm
+from aritcle.forms import ArticleForm
 
 
 # Create your views here.
