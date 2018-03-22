@@ -1,4 +1,5 @@
 from django import forms
+from article.models import Article
 
 #简化下面的代码，直接从models中提取来生存校验器
 """
