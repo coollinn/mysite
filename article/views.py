@@ -44,9 +44,11 @@ def article_create(request, block_id):
             return render(request, "article_create.html", {"b":block, "form":form})
 
 
-def article_detail(request, aid):
+def article_detail(request, block_id, aid):
     aid = int(aid)
-    article = Article.objects.filter(id=aid)
-    return render ("article_detail.html", {"a":article})
-    #article_objs = Article.objects.filter(id=aid)
-    #return render_to_response("article_detail.html", {"a":article_objs})
+    #article = Article.objects.filter(id=aid)
+    #return render ("article_detail.html", {"a":article})
+    block_id = int(block_id)
+    block = Block.objects.get(id=block_id)
+    article_objs = Article.objects.filter(id=aid)
+    return render_to_response("article_detail.html", {"a":article_objs, "b":block})

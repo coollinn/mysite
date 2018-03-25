@@ -24,7 +24,7 @@ from article.views import article_detail
 urlpatterns = [
     url(r'^list/(?P<block_id>\d+)', article_list),
     url(r'^create/(?P<block_id>\d+)', article_create),
-    url(r'^detail/(?P<aid>\d+)', article_detail),
+    url(r'^detail/(?P<block_id>\d+)/(?P<aid>\d+)', article_detail),
 ]
 
 
