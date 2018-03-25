@@ -46,4 +46,4 @@ def article_create(request, block_id):
 
 def article_detail(request, aid):
     article = Article.objects.get(id=aid)
-    return render ("article_detail.html", {"article": article})
+    return render ("article_detail.html", {"a": article})
