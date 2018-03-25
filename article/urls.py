@@ -16,13 +16,15 @@ Including another URLconf
 from django.conf.urls import include, url
 from article.views import article_list
 from article.views import article_create
+from article.views import article_detail
+
 
 
 
 urlpatterns = [
     url(r'^list/(?P<block_id>\d+)', article_list),
     url(r'^create/(?P<block_id>\d+)', article_create),
-    url(r'^detail/(?P<aid>\d+)')
+    url(r'^detail/(?P<aid>\d+)', article_detail),
 ]
 
 
