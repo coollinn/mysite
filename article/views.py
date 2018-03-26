@@ -52,3 +52,4 @@ def article_detail(request, block_id, aid):
     block = Block.objects.get(id=block_id)
     article_objs = Article.objects.filter(id=aid)
     return render_to_response("article_detail.html", {"a":article_objs, "b":block})
+
