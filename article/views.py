@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.shortcuts import render_to_response
 from django.shortcuts import redirect
+from django.core.paginator import Paginator
+
 from block.models import Block
 from article.models import Article
 from article.forms import ArticleForm
@@ -10,7 +12,12 @@ from article.forms import ArticleForm
 def article_list(request, block_id):
     block_id = int(block_id)
     block = Block.objects.get(id=block_id)
-    articles_objs = Article.objects.filter(block=block, status=0).order_by("-id")
+    ARTICLE_CNT_1PAGE = 3
+    #articles_objs = Article.objects.filter(block=block, status=0).order_by("-id")
+    all_articles = Article.objects.filter(block=block, status=0).order_by("-id")
+    p = Paginator(all_articles, ARTICLE_CNT_1PAGE)
+    page = p.page(page_no)
+    articles_objs = page.object_list
     return render_to_response("article_list.html", {"articles":articles_objs, "b":block})
 
 def article_create(request, block_id):
