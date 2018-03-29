@@ -13,6 +13,7 @@ def article_list(request, block_id):
     block_id = int(block_id)
     block = Block.objects.get(id=block_id)
     ARTICLE_CNT_1PAGE = 3
+    page_no = int (request.GET.get("page_no", "1"))
     #articles_objs = Article.objects.filter(block=block, status=0).order_by("-id")
     all_articles = Article.objects.filter(block=block, status=0).order_by("-id")
     p = Paginator(all_articles, ARTICLE_CNT_1PAGE)
