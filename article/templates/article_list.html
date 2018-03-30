@@ -5,37 +5,43 @@
         <a href="/article/create/{{ b.id }}" class="btn btn-primary">发表文章</a>
     </div>
 </div>
-<table class="table table-bordered">
-    <thead>
-    <tr>
-        <th>文章标题</th>
-        <th>作者</th>
-        <th>创建时间</th>
-        <th>更新时间</th>
-    </tr>
-    </thead>
-    <tbody>
-    {% for article in articles %}
-        <tr>
-            <td><a href="/article/detail/{{ b.id }}/{{ article.id }}">{{ article.title }}</a></td>
-            <td>{{ article.author }}</td>
-            <td>{{ article.create_timestamp|date:"Y-m-d P" }}</td>
-            <td>{{ article.last_update_timestamp|date:"Y-m-d P" }}</td>
-        </tr>
-    {% endfor %}
-        <tr>
-            <td>
-                 <nav>
-                    <ul class="pagination">
-                        <li><a href="?page_no=1">首页</a></li>
-                        <li><a href="?page_no=2">&laquo;</a></li>
-                        <li><a href="?page_no=3">&raquo;</a></li>
-                        <li><a href="?page_no=4">尾页</a></li>
+<div class="row">
+    <div class="col-sm-9">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>文章标题</th>
+                <th>作者</th>
+                <th>创建时间</th>
+                <th>更新时间</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% for article in articles %}
+                    <tr>
+                        <td><a href="/article/detail/{{ b.id }}/{{ article.id }}">{{ article.title }}</a></td>
+                        <td>{{ article.author }}</td>
+                        <td>{{ article.create_timestamp|date:"Y-m-d P" }}</td>
+                        <td>{{ article.last_update_timestamp|date:"Y-m-d P" }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
 
-                    </ul>
-                </nav>
-            </td>
-         </tr>
-    </tbody>
-</table>
+<div class="row">
+    <div class="col-sm-9">
+        <nav>
+            <ul class="pagination">
+                <li><a href="?page_no=1">首页</a></li>
+                <li><a href="?page_no=2">&laquo;</a></li>
+                <li><a href="?page_no=3">&raquo;</a></li>
+                <li><a href="?page_no=4">尾页</a></li>
+
+            </ul>
+        </nav>
+
+    </div>
+</div>
 {% endblock %}
