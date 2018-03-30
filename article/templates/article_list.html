@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
+<div class="row">
+    <div class="col-sm-9">
+        <a href="/article/create/{{ b.id }}" class="btn btn-primary">发表文章</a>
+    </div>
+</div>
 <table class="table table-bordered">
     <thead>
     <tr>
@@ -22,9 +27,7 @@
         <a href="/article/create/{{ b.id }}" class="btn btn-primary">发表文章</a>
     </div>
     </tbody>
-</table>
-<div class="row">
-    <div class="col-sm-9">
+    <tr>
         <nav>
             <ul class="pagination">
                 <li><a href="?page_no=1">首页</a></li>
@@ -34,6 +37,6 @@
 
             </ul>
         </nav>
-    </div>
-</div>
+    </tr>
+</table>
 {% endblock %}
