@@ -18,20 +18,22 @@
             <td>{{ article.last_update_timestamp|date:"Y-m-d P" }}</td>
         </tr>
     {% endfor %}
-    <nav>
-        <ul class="pagination">
-            <li><a href="?page_no=1">首页</a></li>
-            <li><a href="?page_no=2">&laquo;</a></li>
-            <li><a href="?page_no=3">&raquo;</a></li>
-            <li><a href="?page_no=4">尾页</a></li>
-
-        </ul>
-    </nav>
+    <div class="col-sm-9">
+        <a href="/article/create/{{ b.id }}" class="btn btn-primary">发表文章</a>
+    </div>
     </tbody>
 </table>
 <div class="row">
     <div class="col-sm-9">
-        <a href="/article/create/{{ b.id }}" class="btn btn-primary">发表文章</a>
+        <nav>
+            <ul class="pagination">
+                <li><a href="?page_no=1">首页</a></li>
+                <li><a href="?page_no=2">&laquo;</a></li>
+                <li><a href="?page_no=3">&raquo;</a></li>
+                <li><a href="?page_no=4">尾页</a></li>
+
+            </ul>
+        </nav>
     </div>
 </div>
 {% endblock %}
